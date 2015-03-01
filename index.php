@@ -8,7 +8,7 @@
 <body>
 <?php
 require_once("ts3ssv.php");
-$ts3ssv = new ts3ssv("ts.5g5.net", 10011);
+$ts3ssv = new ts3ssv("s1.ts.5g5.net", 10011);
 $ts3ssv->useServerPort(9987);
 $ts3ssv->imagePath = "/img/default/";
 $ts3ssv->timeout = 2;
