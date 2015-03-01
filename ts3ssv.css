@@ -1,0 +1,72 @@
+/* https://github.com/LeoWinterDE/TS3SSV */
+
+.ts3ssv, .ts3ssverror{
+	background-color: #ffffff;
+	width: 300px;
+}
+
+.ts3ssv, .ts3ssv *, .ts3ssverror{
+	color: #00000;
+	font-family: Verdana;
+	font-size: 10px;
+}
+
+.ts3ssv label{
+	border-bottom: 1px solid #aaaaaa;
+}
+
+.ts3ssvItem a{
+	color: #000000;
+}
+
+.ts3ssvItem a:hover{
+	background-color: #f6f6f6;
+	color: #000099;
+}
+
+.ts3ssverror{
+	color: #ff0000;
+}
+
+.ts3ssv, .ts3ssv *{
+	vertical-align: middle;
+	margin: 0;
+	padding: 0;
+}
+
+.ts3ssv{
+	position: relative;
+	overflow: hidden;
+}
+
+.ts3ssv label{
+	display: block;
+	padding: 2px 0;
+}
+
+.ts3ssvItem{
+	margin-left: 16px;
+	position: relative;
+	white-space:nowrap;
+}
+
+.ts3ssvItem a{
+	display: block;
+	text-decoration: none;
+}
+
+.ts3ssvItem img{
+	border: 0;
+	vertical-align: middle;
+	margin-right: 2px;
+}
+
+.ts3ssvFlags{
+	position: absolute;
+	right: 0;
+	top: 0;
+}
+
+.ts3ssvServer{
+	margin-left: 0;
+}
