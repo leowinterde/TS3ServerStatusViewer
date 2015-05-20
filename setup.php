@@ -1,5 +1,5 @@
 <?php
-/** https://github.com/LeoWinterDE/TS3SSV **/
+/** https://github.com/LeoWinterDE/TS3ServerStatusViewer **/
 
 // To enable the setup script you have to edit THIS! And replace "$enableGenerator = false;" to "$enableGenerator = true;".
 $enableGenerator = false;
