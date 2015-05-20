@@ -1,4 +1,4 @@
-// https://github.com/LeoWinterDE/TS3SSV
+// https://github.com/LeoWinterDE/TS3ServerStatusViewer
 
 function ts3ssvconnect(id, channel)
 {
