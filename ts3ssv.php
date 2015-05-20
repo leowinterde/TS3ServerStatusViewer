@@ -1,5 +1,5 @@
 <?php
-/** https://github.com/LeoWinterDE/TeamSpeak-Server-Status-Viewer **/
+/** https://github.com/LeoWinterDE/TS3ServerStatusViewer **/
 
 class ts3ssv
 {
