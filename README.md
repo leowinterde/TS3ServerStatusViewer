@@ -6,7 +6,7 @@ Originally a fork of TSStatus (tsstatus.sebastien.me).
 
 ## Download, install
 
-- <a href="https://github.com/LeoWinterDE/TS3SSV/archive/master.zip">Download</a>
+- <a href="https://github.com/LeoWinterDE/TS3ServerStatusViewer/archive/master.zip">Download</a>
 - Extract the archive and upload it to your webspace/website
 - Give the file ts3ssv.php.cache write permission (chmod 777)
 - Navigate to yoursite.tld/setup.php
