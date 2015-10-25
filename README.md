@@ -104,7 +104,7 @@ Originally a fork of TSStatus (tsstatus.sebastien.me).
 ```
 	- start by creating a fork of TSStatus (tsstatus.sebastien.me) - new version nummber (v1)
 	- optimization and adaptation
-	- add index.html
+	- add index.php
 	- MIT License
 ```
 2013-08-31
