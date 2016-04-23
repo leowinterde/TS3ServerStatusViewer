@@ -3,7 +3,7 @@ TeamSpeak 3 Server Stats Viewer (TS3SSV)
 TeamSpeak 3 Server Stats Viewer is a simple status dashboard powered by PHP.
 Originally a fork of TSStatus (tsstatus.sebastien.me).
 
-![screenshot of TS3ServerStatusViewer](//i.imgur.com/x6529AN.jpg)
+![screenshot of TS3ServerStatusViewer](https://i.imgur.com/x6529AN.jpg)
 
 ## Download, install
 
