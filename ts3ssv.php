@@ -25,7 +25,7 @@ class ts3ssv
 	public $hideEmptyChannels;
 	public $hideParentChannels;
 
-	public function ts3ssv($host, $queryPort)
+	public function __construct($host, $queryPort)
 	{
 		$this->_host = $host;
 		$this->_queryPort = $queryPort;
@@ -352,11 +352,44 @@ HTML;
 					$childs = $this->renderChannels($channel["cid"]);
 
 					$cid = $channel["cid"];
+					$image = "<img src='{$imagePath}{$icon}' />";
+
+					if(preg_match( '/\[(.*)spacer([\d\p{L}\w]+)?\]/', $channel["channel_name"], $matches) && $channel["channel_flag_permanent"] && !$channel["pid"])
+					{
+						$flags = '';
+						$image = '';
+						$spacer = explode( $matches[0], $channel["channel_name"] );
+						$checkSpacer = isset( $spacer[1][0] ) ? $spacer[1][0] . $spacer[1][0] . $spacer[1][0] : '';
+
+						if($matches[1] == 'c')
+						{
+							/* Channel name should be centered */
+							$name = "<center>" . $this->toHTML($spacer[1]) . "</center>";
+						}
+						elseif($matches[1] == '*' || (strlen($spacer[1]) == 3 && $checkSpacer == $spacer[1]))
+						{
+							/* Repeat given character (in most use-cases this draws a line) */
+							$addSpacer = '';
+
+							for ($i = 0; $i <= 40; $i++)
+							{
+								if(strlen($addSpacer) >= 40) break;
+
+								$addSpacer .= $spacer[1];
+							}
+
+							$name = "<center>" . $this->toHTML($addSpacer) . "</center>";
+						}
+						else
+						{
+							$name = $spacer[1];
+						}
+					}
 
 					$content .= <<<HTML
 <div class="ts3ssvItem">
 	<a href="$link" title="$title">
-		<img src="$imagePath$icon" />$name
+		$image $name
 		<div class="ts3ssvFlags">
 			$flags
 		</div>
