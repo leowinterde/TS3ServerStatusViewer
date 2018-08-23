@@ -214,10 +214,16 @@ class ts3ssv
 			}
 
 			$serverGroups = $this->parseLine($lines[4]);
-			foreach ($serverGroups as $sg) if($sg["iconid"] > 0) $this->setServerGroupFlag($sg["sgid"], 'group_' . $sg["iconid"] . '.png');
+			foreach ($serverGroups as $sg) {
+					if($sg["iconid"] < 0) $sg["iconid"] += 1<<32;
+					if($sg["iconid"] > 0) $this->setServerGroupFlag($sg["sgid"], 'group_' . $sg["iconid"] . '.png');
+			}
 
 			$channelGroups = $this->parseLine($lines[5]);
-			foreach ($channelGroups as $cg) if($cg["iconid"] > 0) $this->setChannelGroupFlag($cg["cgid"], 'group_' . $cg["iconid"] . '.png');
+			foreach ($channelGroups as $cg) {
+					if($cg["iconid"] < 0) $cg["iconid"] += 1<<32;
+					if($cg["iconid"] > 0) $this->setChannelGroupFlag($cg["cgid"], 'group_' . $cg["iconid"] . '.png');
+			}
 		}
 		else throw new Exception("Invalid server response");
 	}
