@@ -3,6 +3,7 @@
 <!-- https://github.com/LeoWinterDE/TS3SSV -->
 <title>TeamSpeak Server Status Viewer</title>
 <link rel="stylesheet" type="text/css" href="/ts3ssv.css" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <script type="text/javascript" src="/ts3ssv.js"></script>
 </head>
 <body>
