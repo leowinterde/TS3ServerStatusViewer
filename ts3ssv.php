@@ -168,7 +168,7 @@ class ts3ssv
 			$response = "";
 			$response .= $this->sendCommand($this->_useCommand);
 			$response .= $this->sendCommand("serverinfo");
-			$response .= $this->sendCommand("channellist -topic -flags -voice -limits");
+			$response .= $this->sendCommand("channellist -topic -flags -voice -limits -icon");
 			$response .= $this->sendCommand("clientlist -uid -away -voice -groups");
 			$response .= $this->sendCommand("servergrouplist");
 			$response .= $this->sendCommand("channelgrouplist");
@@ -352,6 +352,12 @@ HTML;
 					if($channel["channel_flag_default"] == 1) $flags[] = '16x16_default.png';
 					if($channel["channel_needed_talk_power"] > 0) $flags[] = '16x16_moderated.png';
 					if($channel["channel_flag_password"] == 1) $flags[] = '16x16_register.png';
+					if($channel["channel_icon_id"] != 0) 
+					{
+						if($channel["channel_icon_id"] < 0) $channeliconid = -$channel["channel_icon_id"];
+						if($channel["channel_icon_id"] > 0) $channeliconid = $channel["channel_icon_id"];
+						$flags[] = "channel_" . $channeliconid . ".png";;
+					}
 					$flags = $this->renderFlags($flags);
 
 					$users = $this->renderUsers($channel["cid"]);
